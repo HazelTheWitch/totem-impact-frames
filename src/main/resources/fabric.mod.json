@@ -1,0 +1,42 @@
+{
+	"schemaVersion": 1,
+	"id": "totem-impact-frames",
+	"version": "${version}",
+	"name": "Totem Impact Frames",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/totem-impact-frames/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"gay.frot.TotemImpactFrames"
+		],
+		"client": [
+			"gay.frot.TotemImpactFramesClient"
+		]
+	},
+	"mixins": [
+		"totem-impact-frames.mixins.json",
+		{
+			"config": "totem-impact-frames.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*",
+		"satin": "2.0.0"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
